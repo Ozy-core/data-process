@@ -33,6 +33,7 @@ int main()
         if (in == "exit")
         {
             cout<< "Exiting the program." << endl;
+            false;
         }
 
         int count = 0;
@@ -46,8 +47,6 @@ int main()
 
         cout << "The word '" << in << "' appears " << count << " times in the text." << endl;
     }
-    
-
 
     for(string w: words)
     {
