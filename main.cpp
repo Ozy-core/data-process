@@ -29,23 +29,22 @@ int main()
         cout << "Enter a word to search for (or type 'exit' to quit): ";
         string in;
         cin >> in;
-
-        if (in == "exit")
-        {
-            cout<< "Exiting the program." << endl;
-            b=false;
-        }
-
         int count = 0;
         for (const auto& w : words)
         {
-            if (w == in)
+            if (in == "exit")
+            {
+                cout<< "Exiting the program." << endl;
+                break;
+                b=false;
+            }
+
+            else if (w == in)
             {
                 count++;
             }
-        }
-
-        cout << "The word '" << in << "' appears " << count << " times in the text." << endl;
+            cout << "The word '" << in << "' appears " << count << " times in the text." << endl;
+        } 
     }
 
     for(string w: words)
