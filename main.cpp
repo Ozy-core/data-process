@@ -43,8 +43,11 @@ int main()
             {
                 count++;
             }
-            cout << "The word '" << in << "' appears " << count << " times in the text." << endl;
         } 
+        if (in != "exit")
+        {
+            cout << "The word '" << in << "' appears " << count << " times in Hamlet." << endl;
+        }
     }
 
     for(string w: words)
