@@ -6,7 +6,7 @@ using namespace std;
 int main()
 {
     ifstream stuff;
-    stuff.open("hamlet.txt.rft");
+    stuff.open("hamlet.txt.rtf");
 
     vector<string> words;
     if (stuff.is_open())
@@ -33,7 +33,6 @@ int main()
         if (in == "exit")
         {
             cout<< "Exiting the program." << endl;
-            break;
         }
 
         int count = 0;
