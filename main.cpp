@@ -23,8 +23,8 @@ int main()
         cerr << "Unable to open file hamlet.txt.rft" << endl;
         return 1;
     }
-
-    while (true)
+    bool b=true;
+    while (b)
     {
         cout << "Enter a word to search for (or type 'exit' to quit): ";
         string in;
@@ -33,7 +33,7 @@ int main()
         if (in == "exit")
         {
             cout<< "Exiting the program." << endl;
-            false;
+            b=false;
         }
 
         int count = 0;
