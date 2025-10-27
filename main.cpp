@@ -47,6 +47,66 @@ int main()
 
         cout << "The word '" << in << "' appears " << count << " times in the text." << endl;
     }
+    
+
+
+    for(string w: words)
+    {
+        // Find most common word
+        string mostW= words[0];
+        for(string w: words)
+        {
+            int count1=0;
+            int count2=0;
+            for(string x: words)
+            {
+                if(w==x)
+                {
+                    count1++;
+                }
+                if(mostW==x)
+                {
+                    count2++;
+                }
+            }
+            if(count1>count2)
+            {
+                mostW=w;
+            }
+        }
+        cout<< "The most common word in Hamlet is: " << mostW << endl;
+
+
+        // Count sentences
+        int a=0;
+        if (w==".")
+        {
+            a++;
+        }
+        cout<< "There are "<< a << " senctences in Hamlet." << endl;
+
+        //Longest sentece
+        string longest="";
+        string current="";
+        for(string w: words)
+        {
+            if(w!="." && w!="!" && w!="?")
+            {
+                current+= w + " ";
+            }
+            else
+            {
+                if(current.length()>longest.length())
+                {
+                    longest=current;
+                }
+                current="";
+            }
+            cout<< "The longest sentence in Hamlet is: " << longest << endl;
+        }
+    }
+
+
     stuff.close();
     return 0;
 
