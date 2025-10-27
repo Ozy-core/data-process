@@ -23,9 +23,6 @@ int main()
         cerr << "Unable to open file hamlet.txt.rft" << endl;
         return 1;
     }
-    bool b=true;
-    while (b)
-    {
         cout << "Enter a word to search for (or type 'exit' to quit): ";
         string in;
         cin >> in;
@@ -36,7 +33,6 @@ int main()
             {
                 cout<< "Exiting the program." << endl;
                 break;
-                b=false;
             }
 
             else if (w == in)
@@ -48,7 +44,6 @@ int main()
         {
             cout << "The word '" << in << "' appears " << count << " times in Hamlet." << endl;
         }
-    }
 
     for(string w: words)
     {
